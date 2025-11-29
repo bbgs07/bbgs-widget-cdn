@@ -53,20 +53,25 @@
        3) Sizing
     --------------------------------------------------------- */
     function setNormalSize() {
-        if (window.innerWidth < 768) {
-            // Mobile full screen
-            iframe.style.width = "100%";
-            iframe.style.height = "100vh";
-            iframe.style.left = "0";
-            iframe.style.right = "0";
-        } else {
-            // Desktop fixed 33% × 93%
-            iframe.style.width = "33%";
-            iframe.style.height = "93vh";
-            iframe.style.right = "0";
-            iframe.style.left = "auto";
-        }
+    if (window.innerWidth < 768) {
+        // Mobile — full width, but 5% margin from top
+        iframe.style.width = "100%";
+        iframe.style.height = "95vh";  // 100vh - 5% = 95vh height
+        iframe.style.top = "5vh";      // 5% top margin
+        iframe.style.bottom = "0";
+        iframe.style.left = "0";
+        iframe.style.right = "0";
+    } else {
+        // Desktop — 33% width × 93% height
+        iframe.style.width = "33%";
+        iframe.style.height = "93vh";
+        iframe.style.top = "auto";
+        iframe.style.bottom = "0";
+        iframe.style.right = "0";
+        iframe.style.left = "auto";
     }
+}
+
 
     /* ---------------------------------------------------------
        4) Open / Minimize Behavior
