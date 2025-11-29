@@ -57,7 +57,7 @@
         // Mobile — full width, but 5% margin from top
         iframe.style.width = "100%";
         iframe.style.height = "95vh";  // 100vh - 5% = 95vh height
-        iframe.style.top = "0.2%";      // 5% top margin
+        iframe.style.top = "0%";      // 5% top margin
         iframe.style.bottom = "0";
         iframe.style.left = "0";
         iframe.style.right = "0";
