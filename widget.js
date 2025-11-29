@@ -1,10 +1,9 @@
-// Melvin Widget – Option C (Close button minimizes only)
 (function () {
 
     console.log("Melvin Widget Loaded");
 
     /* ---------------------------------------------------------
-       1) Create Chat Button
+       
     --------------------------------------------------------- */
     var chatBtn = document.createElement("div");
     chatBtn.id = "melvinChatBtn";
@@ -28,7 +27,7 @@
     document.body.appendChild(chatBtn);
 
     /* ---------------------------------------------------------
-       2) Create iframe widget
+       
     --------------------------------------------------------- */
     var iframe = document.createElement("iframe");
     iframe.id = "melvinWidgetFrame";
@@ -44,13 +43,13 @@
     iframe.style.maxHeight = "100vh";
     iframe.style.maxWidth = "100vw";
 
-    // Safe iPhone fix
+    
     iframe.style.webkitOverflowScrolling = "touch";
 
     document.body.appendChild(iframe);
 
     /* ---------------------------------------------------------
-       3) Sizing
+       
     --------------------------------------------------------- */
     function setNormalSize() {
     if (window.innerWidth < 768) {
@@ -74,7 +73,7 @@
 
 
     /* ---------------------------------------------------------
-       4) Open / Minimize Behavior
+      
     --------------------------------------------------------- */
     function openWidget() {
         console.log("Widget opened");
@@ -92,7 +91,7 @@
     chatBtn.addEventListener("click", openWidget);
 
     /* ---------------------------------------------------------
-       5) Add Close Button INSIDE widget
+       
     --------------------------------------------------------- */
     window.addEventListener("message", function (event) {
         // This checks if iframe is ready to receive close-command
@@ -105,7 +104,7 @@
     });
 
     /* ---------------------------------------------------------
-       6) AUTO OPEN WHEN PAGE LOADS
+       
     --------------------------------------------------------- */
     setTimeout(() => {
         openWidget();   // 👈 FIX: Open widget automatically
