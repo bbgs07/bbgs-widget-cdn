@@ -94,6 +94,9 @@
         if (event.data === "melvin-close-clicked") {
             minimizeWidget(); // Option C behavior
         }
+        if (event.data === "melvin-call-now") {
+            window.location.href = "tel:+1-805-507-2722"; 
+        }
     });
 
     /* ---------------------------------------------------------
