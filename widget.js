@@ -109,7 +109,7 @@
     --------------------------------------------------------- */
     setTimeout(() => {
         openWidget();   // 👈 FIX: Open widget automatically
-    }, 5000000000000000000);
+    }, 300);
 
     window.addEventListener("resize", setNormalSize);
 
